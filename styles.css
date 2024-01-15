@@ -1,29 +1,85 @@
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #F0F0F0;
-    color: #333333;
+    font-family: Arial, sans-serif; /* More readable font */
+    background-color: #545454; /* Darker background for contrast */
+    color: #ffffff; /* White text for better readability */
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #000099;
-    color: white;
+a:visited {
+    color: black; /* Sets visited link color to black */
+}
+
+.main-layout {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.marquee-cell {
+    background-color: #333333; /* Subdued color */
+    font-size: 18px; /* Smaller font for marquee */
+    color: #f2f2f2; /* Light grey text */
+}
+
+.sidebar {
+    background-color: #2c3e50; /* Dark blue */
+    color: #ecf0f1; /* Soft white */
+    vertical-align: top;
+    padding: 10px;
+    border: 2px solid #34495e; /* Border color */
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    color: #2c3e50; /* Dark text for contrast */
+}
+
+.blinking-news span {
+    font-size: 16px; /* Smaller font size for readability */
+    color: #c0392b; /* Red */
+    font-weight: bold;
+    animation: blink 1s linear infinite;
+}
+
+.cool-text {
+    font-size: 16px;
+    color: #2c3e50; /* Dark color for readability */
+    text-shadow: none; /* Removed text shadow for clarity */
+}
+
+.footer {
+    background-color: #2c3e50; /* Dark blue */
+    color: #ecf0f1; /* Soft white */
     text-align: center;
     padding: 10px 0;
 }
 
-main {
-    margin: 15px;
+.logo, .main-image {
+    border: 2px solid #7f8c8d; /* Less vibrant border */
+    padding: 5px;
+    width: 80%;
+    margin: 10px auto; /* Centered margin */
 }
 
-footer {
-    background-color: #000099;
-    color: white;
-    text-align:
-        center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+#bouncing-text {
+    display: none;
+    animation: bounce 2s infinite;
+    color: #2ecc71; /* Green for visibility */
+}
+
+.cool-clock {
+    font-size: 16px;
+    color: #f39c12; /* Orange */
+    font-weight: bold;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: start; /* Aligns items to the top */
+}
+
+.marquee-text {
+    margin-right: 10px; /* Adds some space between the text and the image */
 }

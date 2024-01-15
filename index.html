@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LATE Meme Coin</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to LATE Meme Coin</h1>
-    </header>
-    <main>
-        <p>Discover the latest and greatest in the world of meme cryptocurrency: LATE!</p>
-        <!-- More content goes here -->
-    </main>
-    <footer>
-        <p>© 2024 LATE Meme Coin</p>
-    </footer>
-    <script src="dist/bundle.js"></script>
-</body>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LATE on Radix</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./bundle.js"></script>
+    </head>
+    
+    <body onload="startBlink()">
+        <table class="main-layout">
+            <tr>
+                <td class="sidebar">
+                    <div class="blinking-news">
+                        <span id="blinking-text">Latest Drops!</span>
+                        <ul>
+                            <li>
+                                <h3><a href="#">Is late the new early, or the old early?</a></h3>
+                            </li>
+                            <li>
+                                <h3><a href="https://ociswap.com/resource_rdx1tk2y80mf078ej8awmw5amqwq82n23c6ul4kwpxs8khf876fdm5wvnl">Missed the boat?</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="content">
+                    <h1>Welcome to LATE Meme Coin</h1>
+                    <p class="cool-text">Hop on the Hype Train of LATE!</p>
+                    <button onclick="toggleBounce()">Hit it!</button>
+                    <div id="bouncing-text">🌟 Fashionably Late 🌟</div>
+                </td>
+                <td class="sidebar">
+                    <div class="cool-clock">
+                        <p>Time isn't real</p>
+                        <span id="clock"></span>
+                    </div>
+                </td>
+                <tr>
+                    <td colspan="3" class="marquee-cell">
+                        <marquee behavior="scroll" direction="left">
+                            <div class="marquee-content">
+                                <span class="marquee-text">💥🚀 Not Gonna Make It (On Time)! 🚀💥</span>
+                                <img src="./assets/always-late.webp" alt="Always Late" class="main-image" width="500">
+                            </div>
+                        </marquee>
+                    </td>                    
+                </tr>
+            </tr>
+            <tr>
+                <td colspan="3" class="footer">
+                    <p>You're Visitor Number: 7777777</p>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
+
