@@ -1,0 +1,29 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #F0F0F0;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000099;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    margin: 15px;
+}
+
+footer {
+    background-color: #000099;
+    color: white;
+    text-align:
+        center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
