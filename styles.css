@@ -1,13 +1,12 @@
-body {
-    font-family: Arial, sans-serif; /* More readable font */
-    background-color: #545454; /* Darker background for contrast */
-    color: #ffffff; /* White text for better readability */
+/* Base Styles (common to both themes) */
+body, a, button {
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease;
 }
 
 a:visited {
-    color: black; /* Sets visited link color to black */
+    color: inherit;
 }
 
 .main-layout {
@@ -15,71 +14,72 @@ a:visited {
     table-layout: fixed;
 }
 
-.marquee-cell {
-    background-color: #333333; /* Subdued color */
-    font-size: 18px; /* Smaller font for marquee */
-    color: #f2f2f2; /* Light grey text */
-}
-
-.sidebar {
-    background-color: #2c3e50; /* Dark blue */
-    color: #ecf0f1; /* Soft white */
-    vertical-align: top;
+.sidebar, .content, .footer {
     padding: 10px;
-    border: 2px solid #34495e; /* Border color */
-}
-
-.content {
     text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa; /* Light background */
-    color: #2c3e50; /* Dark text for contrast */
 }
 
-.blinking-news span {
-    font-size: 16px; /* Smaller font size for readability */
-    color: #c0392b; /* Red */
-    font-weight: bold;
-    animation: blink 1s linear infinite;
+/* Web5 Retro Style with fun surprises */
+.body-web5 {
+    font-family: 'Courier New', monospace;
+    background-color: #d3d3d3;
+    color: #000000;
 }
 
-.cool-text {
-    font-size: 16px;
-    color: #2c3e50; /* Dark color for readability */
-    text-shadow: none; /* Removed text shadow for clarity */
+.body-web5 a {
+    color: #008000; /* Green for retro vibes */
 }
 
-.footer {
-    background-color: #2c3e50; /* Dark blue */
-    color: #ecf0f1; /* Soft white */
+.body-web5 a:hover {
+    text-decoration: underline; /* Bring back the classic underline */
+}
+
+.body-web5 .sidebar {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* Add a fun ASCII art header for Web5 */
+.body-web5 .header {
+    font-size: 3rem;
     text-align: center;
-    padding: 10px 0;
 }
 
-.logo, .main-image {
-    border: 2px solid #7f8c8d; /* Less vibrant border */
-    padding: 5px;
-    width: 80%;
-    margin: 10px auto; /* Centered margin */
+.body-web5 .header::before {
+    content: "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
 }
 
-#bouncing-text {
-    display: none;
-    animation: bounce 2s infinite;
-    color: #2ecc71; /* Green for visibility */
+/* Web3 Modern Style with playful elements */
+.body-web3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1A1A1D;
+    color: #C5C6C7;
 }
 
-.cool-clock {
-    font-size: 16px;
-    color: #f39c12; /* Orange */
-    font-weight: bold;
+.body-web3 a {
+    color: #66FCF1;
 }
 
-.marquee-content {
-    display: flex;
-    align-items: start; /* Aligns items to the top */
+.body-web3 button {
+    background-color: #66FCF1;
+    color: #1A1A1D;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
-.marquee-text {
-    margin-right: 10px; /* Adds some space between the text and the image */
+.body-web3 button:hover {
+    background-color: #45A29E; /* Slightly darker hover for a playful touch */
+}
+
+/* Add a futuristic neon glow to elements for Web3 */
+.body-web3 .sidebar,
+.body-web3 .content,
+.body-web3 .footer {
+    box-shadow: 0 0 10px #66FCF1;
+}
+
+#fading-text {
+    opacity: 0; /* Start with hidden text */
 }
