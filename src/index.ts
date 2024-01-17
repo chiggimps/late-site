@@ -33,12 +33,12 @@ class AnimationController {
 
     constructor(private element: HTMLElement) { }
 
-    fadeIn(duration: number = 2.5): void {
+    fadeIn(duration: number = 3.5): void {
         this.element.style.transition = `opacity ${duration}s`;
         this.element.style.opacity = '1';
     }
 
-    fadeOut(duration: number = 2.5): void {
+    fadeOut(duration: number = 3.5): void {
         this.element.style.transition = `opacity ${duration}s`;
         this.element.style.opacity = '0';
     }
@@ -47,6 +47,14 @@ class AnimationController {
 function fadeFadingText(): void {
     const animationController = new AnimationController(document.getElementById('fading-text') as HTMLElement);
     animationController.fadeIn();
+
+    // delete the button that was clicked
+    const fadeButton = document.getElementById('toggle-animation-button') as HTMLButtonElement;
+    fadeButton.remove();
+
+    // setTimeout(() => {
+    //     animationController.fadeOut();
+    // }, 2000);
 }
 
 ////////////////////////////////////
