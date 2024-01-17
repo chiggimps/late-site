@@ -2,11 +2,13 @@
 
 ## Building
 
-Run `npx webpack --mode development` to build the site. The output will be in the `dist` directory.
+Project is built w/ Vite. 
+
+Run `npm run build` to build to `dist/`.
 
 ## Running on a local
 
-Run `npx webpack serve --mode development` to start a local server on port 8080.
+Run `npm run dev` to run a local server.
 
 ## Deploying
 
@@ -16,6 +18,6 @@ After building to dist, push to Firebase: `firebase deploy`.
 
 Main page is in `index.html`. 
 
-The main script is `src/index.ts`, which gets bundled into `dist/bundle.js`.
+The main script is `src/index.ts`, which gets bundled with vite to `dist/assets/index-xxx.js`
 
 The main style is `styles.css`.
