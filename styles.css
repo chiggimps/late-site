@@ -1,21 +1,22 @@
 :root {
-    /* Web3 Theme - Modern and Sleek */
-    --primary-color: oklch(70% 0.036 250); /* Vibrant Blue */
-    --secondary-color: oklch(50% 0.040 20); /* Deep Orange */
-    --background-color-web3: oklch(10% 0.008 260); /* Very Dark Blue-Gray */
+    /* Web3 Theme - Modern and Vibrant */
+    --primary-color: oklch(70% 0.15 250); /* Bright Sky Blue */
+    --secondary-color: oklch(50% 0.15 20); /* Vivid Orange */
+    --background-color-web3: oklch(10% 0.05 260); /* Dark Slate Blue */
     --text-color-web3: oklch(95% 0.002 100); /* Bright White */
-    --neon-glow-color: oklch(80% 0.050 150); /* Neon Green */
+    --neon-glow-color: oklch(80% 0.20 150); /* Lime Green */
 
-    /* Web5 Retro Theme - Funky Early 2000s */
-    --retro-background: oklch(75% 0.030 100); /* Bright Lime Green */
-    --retro-text-color: oklch(15% 0.010 280); /* Deep Violet */
-    --retro-sidebar-background: oklch(55% 0.040 300); /* Hot Pink */
-    --retro-sidebar-text-color: oklch(85% 0.025 60); /* Cream */
-    --retro-green: oklch(65% 0.045 140); /* Electric Blue */
-    --retro-accent: oklch(60% 0.035 20); /* Burnt Orange */
-    --retro-border: oklch(50% 0.020 190); /* Teal */
-    --retro-shadow: oklch(25% 0.015 70); /* Muted Gold */
+    /* Web5 Retro Theme - Funky and Playful */
+    --retro-background: oklch(75% 0.12 100); /* Neon Lime */
+    --retro-text-color: oklch(15% 0.04 280); /* Deep Purple */
+    --retro-sidebar-background: oklch(60% 0.14 300); /* Bright Pink */
+    --retro-sidebar-text-color: oklch(90% 0.02 60); /* Light Cream */
+    --retro-green: oklch(65% 0.18 140); /* Cyan Blue */
+    --retro-accent: oklch(70% 0.16 60); /* Coral Red */
+    --retro-border: oklch(50% 0.12 190); /* Aqua Teal */
+    --retro-shadow: oklch(30% 0.08 70); /* Goldish Yellow */
 }
+
 
 
 /* Base Styles (common to both themes) */
@@ -45,31 +46,31 @@ button:hover {
 }
 
 /* Web5 Retro Style with fun surprises */
-/* Web5 Retro Style */
 .body-web5 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Iconic early 2000s font */
     background-color: var(--retro-background);
     color: var(--retro-text-color);
 }
 
 .body-web5 a {
-    color: var(--retro-green);
+    color: var(--retro-accent);
 }
 
 .body-web5 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--retro-green);
+    background-color: var(--retro-shadow);
 }
 
 .body-web5 .sidebar {
     background-color: var(--retro-sidebar-background);
     color: var(--retro-sidebar-text-color);
-    border: 2px solid var(--retro-border);
 }
 
 .body-web5 .header {
     font-size: 3rem;
     text-align: center;
-    color: var(--retro-accent);
+    color: var(--retro-border);
 }
 
 /* Web3 Modern Style with playful elements */
