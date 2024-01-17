@@ -1,8 +1,20 @@
+:root {
+    --primary-color: #66FCF1;
+    --secondary-color: #45A29E;
+    --background-color-web3: #1A1A1D;
+    --text-color-web3: #C5C6C7;
+    --neon-glow-color: #66FCF1;
+    --retro-background: #d3d3d3;
+    --retro-text-color: #000000;
+}
+
 /* Base Styles (common to both themes) */
 body, a, button {
     margin: 0;
     padding: 0;
     transition: all 2.5s ease;
+    /* text size  */
+    font-size: 1.5rem;
 }
 
 a:visited {
@@ -19,9 +31,13 @@ a:visited {
     text-align: center;
 }
 
+button:hover {
+    background-color: darken(#4d0000, 20%);
+}
+
 /* Web5 Retro Style with fun surprises */
 .body-web5 {
-    font-family: 'Courier New', monospace;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #d3d3d3;
     color: #000000;
 }
@@ -52,34 +68,55 @@ a:visited {
 /* Web3 Modern Style with playful elements */
 .body-web3 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #1A1A1D;
-    color: #C5C6C7;
+    background-color: var(--background-color-web3);
+    color: var(--text-color-web3);
 }
 
 .body-web3 a {
     color: #66FCF1;
 }
 
+.body-web3 a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width .3s;
+}
+
+.body-web3 a:hover::after {
+    width: 100%;
+}
+
 .body-web3 button {
-    background-color: #66FCF1;
-    color: #1A1A1D;
+    background-color: var(--primary-color);
+    color: var(--background-color-web3);
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .body-web3 button:hover {
-    background-color: #45A29E; /* Slightly darker hover for a playful touch */
+    background-color: var(--secondary-color);
+    transform: translateY(-6px);
+}
+
+.body-web3 .cool-clock {
+    filter: drop-shadow(2px 4px 6px var(--neon-glow-color));
 }
 
 /* Add a futuristic neon glow to elements for Web3 */
 .body-web3 .sidebar,
 .body-web3 .content,
 .body-web3 .footer {
-    box-shadow: 0 0 10px #66FCF1;
+    box-shadow: 0 0 10px var(--neon-glow-color);
 }
 
 #fading-text {
     opacity: 0; /* Start with hidden text */
 }
+
+
