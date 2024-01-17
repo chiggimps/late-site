@@ -60,6 +60,7 @@ function fadeFadingText(): void {
 ////////////////////////////////////
 
 // This function switches the theme from web5 to web3
+// What is this doing? .. it is changing the theme of the page, by changing the class of the body element, which is the top level element of the page
 function updateTheme(): void {
     const body = document.body;
     const themeToggleButton = document.getElementById('theme-toggle') as HTMLButtonElement;
@@ -74,6 +75,7 @@ function updateTheme(): void {
         themeToggleButton.textContent = 'Web3';
     }
 }
+
 
 ////////////////////////////////////
 // Export these so can be used in html?
