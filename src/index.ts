@@ -68,14 +68,32 @@ function updateTheme(): void {
     if (body.classList.contains('body-web5')) {
         body.classList.remove('body-web5');
         body.classList.add('body-web3');
-        themeToggleButton.textContent = 'Web5';
+        themeToggleButton.textContent = 'Go Web5';
     } else {
         body.classList.remove('body-web3');
         body.classList.add('body-web5');
-        themeToggleButton.textContent = 'Web3';
+        themeToggleButton.textContent = 'Go Web3';
     }
 }
 
+////////////////////////////////////
+// This function changes the background color of the page when the color picker is changed
+function changeBackgroundColor(): void {
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const colorPicker = document.getElementById('colorPicker');
+
+        colorPicker?.addEventListener('sl-change', (event: Event) => {
+            const picker = event.target as HTMLInputElement; // Assuming value property exists
+            if (picker) {
+                body.style.backgroundColor = picker.value;
+            }
+        });
+    });
+}
+
+// This needs to be run when loaded to add the event listener
+changeBackgroundColor();
 
 ////////////////////////////////////
 // Export these so can be used in html?

@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link rel="icon" href="./img/favicon.ico">
         <meta property="og:image" content="./img/late-logo.jpg">
         <meta property="og:title" content="LATE on Radix $XRD">
@@ -12,10 +11,12 @@
         <meta property="og:url" content="https://late.ngmi.foo">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="LATE on Radix $XRD">
-
         <title>LATE on Radix $XRD</title>
         <link rel="stylesheet" href="/styles.css">
         <script type="module" src="/src/index.ts"></script>
+        <!-- Shoelace Stylesheet and components for sick web components -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/themes/light.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/shoelace-autoloader.js"></script>        
     </head>
     <body onload="startBlink()">
         <table class="main-layout">
@@ -70,9 +71,15 @@
             </tr>
             <tr>
                 <td colspan="3" class="footer">
-                    <p>You're Visitor Number: 7777777</p>
+                    Wow! Pick a color! ⬇️
+                    <br>
+                    <sl-color-picker id="colorPicker"></sl-color-picker>
                 </td>
-            </tr>
-        </table>
-    </body>
-</html>
+                <tr>
+                    <td colspan="3" class="footer">
+                        <p>You're Visitor Number: 7777777</p>
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </html>
