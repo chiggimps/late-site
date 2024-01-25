@@ -16,7 +16,7 @@
         <script type="module" src="/src/index.ts"></script>
         <!-- Shoelace Stylesheet and components for sick web components -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/themes/light.css">
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/shoelace-autoloader.js"></script>        
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/shoelace-autoloader.js"></script>
     </head>
     <body onload="startBlink()">
         <table class="main-layout">
@@ -72,8 +72,16 @@
             <tr>
                 <td colspan="3" class="footer">
                     Wow! Pick a color! ⬇️
+                    <br><br>
+                    <sl-color-picker inline id="colorPicker" size="large"></sl-color-picker>
                     <br>
-                    <sl-color-picker id="colorPicker"></sl-color-picker>
+                    <br>
+                    <sl-progress-bar
+                        value="0"
+                        style="--height: 50px;"
+                        label="Late progress"
+                        class="progress-bar-values"
+                    ></sl-progress-bar>
                 </td>
                 <tr>
                     <td colspan="3" class="footer">

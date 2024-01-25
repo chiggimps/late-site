@@ -96,6 +96,49 @@ function changeBackgroundColor(): void {
 changeBackgroundColor();
 
 ////////////////////////////////////
+
+function updateProgress(): void {
+    document.addEventListener('DOMContentLoaded', () => { 
+        const progressBar = document.querySelector('sl-progress-bar') as HTMLProgressElement;
+
+        let interval = 1000; // Start with a 1-second interval
+
+        const updateInterval = () => {
+            // Randomly change the interval duration
+            interval = Math.floor(Math.random() * (3000 - 500)) + 500;
+        };
+
+        const updateProgressBar = () => {
+            progressBar.value = Math.floor(Math.random() * 100);
+            progressBar.textContent = `${progressBar.value}% Progress (will be Late)`;
+
+            // Set color based on progress and add more dramatic colors
+            if (progressBar.value < 20) {
+                progressBar.style.setProperty('--indicator-color', 'darkred'); // Very low progress
+            } else if (progressBar.value < 40) {
+                progressBar.style.setProperty('--indicator-color', 'orangered'); // Low progress
+            } else if (progressBar.value < 60) {
+                progressBar.style.setProperty('--indicator-color', 'darkorange'); // Mid progress
+            } else if (progressBar.value < 80) {
+                progressBar.style.setProperty('--indicator-color', 'brown'); // High progress
+            } else {
+                progressBar.style.setProperty('--indicator-color', 'limegreen'); // Near completion
+            }
+            
+            // Randomize interval
+            updateInterval();
+            setTimeout(updateProgressBar, interval);
+        };
+
+        // Initial call
+        updateProgressBar();
+    });    
+}
+
+
+updateProgress();
+
+////////////////////////////////////
 // Export these so can be used in html?
 window.updateClock = updateClock;
 window.startBlink = startBlink;
